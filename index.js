@@ -5,13 +5,7 @@ const bodyParser= require('body-parser')
 
 const app = express();
 app.use(bodyParser.json())
-
 routes(app);
-
-const PORT = 3001;
-
-app.listen(PORT, function () {
+app.listen(3001, function () {
   console.log("Servidor corriendo en el puerto 3001");
 });
-
-
