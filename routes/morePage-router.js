@@ -1,7 +1,8 @@
 const {Router} = require("express");
+const {morePage} = require("../controller/morePage-controller");
 
-const morePgaeRouter = Router();
+const morePageRouter = Router();
 
-morePgaeRouter.get("/", (req, res) => {})
+morePageRouter.get("/:id", morePage)
 
-module.exports = morePgaeRouter;
+module.exports = morePageRouter;

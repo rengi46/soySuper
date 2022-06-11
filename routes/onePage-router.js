@@ -1,7 +1,8 @@
 const {Router} = require("express");
+const {onePage} = require("../controller/onePage-controller");
 
-const onePgaeRouter = Router();
+const onePageRouter = Router();
 
-onePgaeRouter.get("/", (req, res) => {})
+onePageRouter.get("/", onePage)
 
-module.exports = onePgaeRouter;
+module.exports = onePageRouter;
