@@ -1,10 +1,9 @@
-const onePgaeRouter = require("./onePage-router");
-const morePgaeRouter = require("./morePage-router");
+const pageRouter = require("./page-router");
+
 
 const routes = (server) => {
     server.use(
-        onePgaeRouter,
-        morePgaeRouter
+        pageRouter
     );
   };
   
