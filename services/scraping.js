@@ -23,7 +23,12 @@ async function  getData(page) {
             if(infoPage !== null){
                 infoPage= infoPage.innerText;
             }
-            return {title,infoPage};
+
+            let rank = item.querySelector('.rank');
+            if(rank !== null){
+                rank= rank.innerText;
+            }
+            return {title,infoPage,rank};
         })
         //cojemos el selcector de subText
         let substext = document.querySelectorAll('.subtext');
