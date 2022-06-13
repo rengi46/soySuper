@@ -23,7 +23,7 @@ async function getDataByPage(nPage){
             dataPage =await getData(i)
             cache.set("page"+i,dataPage)
         }
-        data= [...dataPage,...data];
+        data = [...dataPage,...data];
     }
     return data
 }
