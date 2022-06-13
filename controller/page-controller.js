@@ -11,6 +11,9 @@ async function onePage(req, res) {
 
 async function morePage(req, res) {
     const id = req.params.id;
+    if(typeof id !== "number" && id < 0 && id > 30){
+        res.status(400).send("Bad request");
+    }
     const data =await getDataByPage(id);
     res.send(sortData(data));
 }
